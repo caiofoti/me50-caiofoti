@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Advanced Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="index.html" class="google-nav-brand">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Nav Brand" class="google-nav-brand">
+            </a>
+            <div class="nav-links">
+                <a href="image_search.html">Image Search</a>
+                <div class="profile-container">
+                    <a href="https://www.google.com/intl/en/about/products" class="google-apps-link" title="Google Apps"></a>
+                        <div class="google-apps-icon"></div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/caiofoti">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEXdbLdZXozTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719868723289?e=1729123200&v=beta&t=CnnT5AlQ0_ZG5-vOFuaP7dH7O89D6V75dWNx5IaCFNU" alt="Profile Picture" class="profile-picture">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="advanced-search-title-container">
+        <div class="advanced-search-title-wrapper">
+            <h1 class="advanced-search-title">Advanced Search</h1>
+        </div>
+    </div>
+    <div class="container">
+        <form action="https://www.google.com/search">
+            <h2 class="find-pages-title">Find Pages With...</h2>
+            <div class="advanced-search-field">
+                <label class="advanced-search-label">all these words:</label>
+                <input type="text" name="as_q" class="advanced-search-bar">
+            </div>
+            <div class="advanced-search-field">
+                <label class="advanced-search-label">this exact word or phrase:</label>
+                <input type="text" name="as_epq" class="advanced-search-bar">
+            </div>
+            <div class="advanced-search-field">
+                <label class="advanced-search-label">any of these words:</label>
+                <input type="text" name="as_oq" class="advanced-search-bar">
+            </div>
+            <div class="advanced-search-field">
+                <label class="advanced-search-label">none of these words:</label>
+                <input type="text" name="as_eq" class="advanced-search-bar">
+            </div>
+            <div class="button-container">
+                <input type="submit" value="Advanced Search" class="advanced-search-button">
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Google Search Clone Project. All rights reserved.</p>
+        <p>A Google search page clone for <a href="https://cs50.harvard.edu/web/2020/projects/0/search/" target="_blank">CS50’s Web Programming with Python and JavaScript - Project 0</a></p>
+    </footer>
+</body>
+</html>

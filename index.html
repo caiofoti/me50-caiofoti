@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Google Search</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <a href="index.html" class="google-nav-brand">
+                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Google Nav Brand" class="google-nav-brand">
+            </a>
+            <div class="nav-links">
+                <a href="image_search.html">Image Search</a>
+                <a href="advanced_search.html">Advanced Search</a>
+                <div class="profile-container">
+                    <a href="#" class="google-apps-link" title="Google Apps">
+                        <div class="google-apps-icon"></div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/caiofoti" title="About Me">
+                        <img src="https://media.licdn.com/dms/image/v2/D4D03AQEXdbLdZXozTQ/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1719868723289?e=1729123200&v=beta&t=CnnT5AlQ0_ZG5-vOFuaP7dH7O89D6V75dWNx5IaCFNU" alt="Profile Picture" class="profile-picture">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="logo-container">
+            <img src="https://static.wikia.nocookie.net/logopedia/images/d/dd/Google_Brazil_Independence_Day_2014.gif/revision/latest?cb=20141111232050" alt="Google Logo" class="google-logo">
+        </div>
+        <form action="https://www.google.com/search" autocomplete="off" id="searchbar">
+            <div class="search-container">
+                <input type="text" name="q" class="search-bar" placeholder="Search">
+                <span class="left-pan"><i class="fa fa-microphone"></i></span>
+            </div>
+            <div class="button-container">
+                <button type="submit" form="searchbar" formaction="https://google.com/search" class="search-button">Google Search</button>
+                <button type="button" onclick="feelingLucky()" class="lucky-button">I'm Feeling Lucky</button>
+            </div>
+        </form>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2024 Google Search Clone Project. All rights reserved.</p>
+        <p>A Google search page clone for <a href="https://cs50.harvard.edu/web/2020/projects/0/search/" target="_blank">CS50’s Web Programming with Python and JavaScript - Project 0</a></p>
+    </footer>
+    <script>
+        function feelingLucky() {
+            var query = document.querySelector("#searchbar input[name='q']").value;
+            var luckyUrl = "https://www.google.com/search?q=" + encodeURIComponent(query) + "&btnI";
+            window.location.href = luckyUrl;
+        }
+
+        document.querySelector('.google-apps-icon').addEventListener('click', function() {
+            const googleApps = [
+                'https://mail.google.com/',
+                'https://drive.google.com/',
+                'https://calendar.google.com/',
+                'https://photos.google.com/',
+                'https://maps.google.com/'
+            ];
+            const randomApp = googleApps[Math.floor(Math.random() * googleApps.length)];
+            window.location.href = randomApp;
+        });
+    </script>
+</body>
+</html>
